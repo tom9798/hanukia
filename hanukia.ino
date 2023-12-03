@@ -8,7 +8,7 @@ bool isON = false;
 unsigned long timeON = 0;  // Record the time when the button is pressed
 
 unsigned long previousMillis = 0;
-const long flameInterval = 20;  // Adjust this value for the flame flicker effect
+const long flameInterval = 120;  // Adjust this value for the flame flicker effect
 
 bool ledStates[] = {false, false, false, false, false, false, false, false, false, false}; // Keeps track of LED states
 bool allOff = true;
@@ -94,7 +94,7 @@ void turnLED(int day) {
 void flickerFlame() {
   for (int i = 0; i < 10; i++) {
     if (ledStates[i]) {
-      int randomBrightness = random(50, 256);  // Random brightness level
+      int randomBrightness = random(150, 256);  // Random brightness level
       analogWrite(LedPin[i], randomBrightness);
     }
   }
