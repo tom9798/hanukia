@@ -1,6 +1,6 @@
 #include "LowPower.h"
 const int ButtonPin = 13;
-const int wake = 2; //Interrupt pin for waking up from stdby mode (MUST BE THIS ONE OR PIN 3!!)
+const int wake = 2; //Interrupt pin for waking up from stdby mode (MUST BE THIS ONE OR PIN 3!! current physical configuration - pin 2)
 const int LedPin[] = {3, 4, 5, 6, 7, 8, 9, 10, 11};  // Array of LED pins
 int CurrentDay = 0;                                 // Counter to keep track of the current day
 int debounceDuration = 120;                         // Time duration for button debounce
