@@ -56,11 +56,11 @@ void loop() {
     }
   }
 
-    if (allOff && (millis() - timeON > 5000)) {
-    isON = false;
-    CurrentDay = 0;
-    LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF); // set arduino to power saving mode
-  }
+  //   if (allOff && (millis() - timeON > 5000)) {
+  //   isON = false;
+  //   CurrentDay = 0;
+  //   LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF); // set arduino to power saving mode
+  // }
 
   if (isON && (millis() - timeON > 2100000)) {
     isON = false;
